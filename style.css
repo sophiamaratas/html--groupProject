@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 4rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    transition: .2s linear;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+img{
+    width: 100%;
+}
+
+body{
+    color: var(--text-color);
+}
+
+/*Header*/
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*padding: 1% 5%;*/
+    padding: 1%;
+    background: #203162;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+.logo img{
+    margin-left: 15px;
+    color: #abd7ff;
+    height: 50px;
+    width: 50px;
+}
+
+.logo h2{
+    margin-left: 15px;
+    color: #abd7ff;
+    position: absolute;
+    top: 25px;
+    left: 75px;
+    text-transform: uppercase;
+}
+
+.navbar {
+    display: flex;
+    margin-right: 50px;
+    align-items: center;
+}
+
+.navbar li{
+    margin: 0 15px;
+}
+
+.navbar li a{
+    position: relative;
+    color: #abd7ff;
+    font-size: 15px;
+    padding: 6px 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#menu-icon{
+    color: var(--text-color);
+    font-size: 24px;
+    z-index: 100001;
+    cursor: pointer;
+    display: none;
+}
+
+/*home*/
+.home{
+    min-height: 100vh;
+    background-image: url(images/bg1.png);
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center;
+    gap: 1.5rem;
+}
+
+.home-text{
+    text-align: center;
+    position: absolute;
+    bottom: 15%;
+    right: 315px;
+}
+
+.home-text h1{
+    bottom: 0;
+    font-size: 3.4rem;
+    color: #abd7ff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    /*text-shadow: 2px 2px 4px #000000;*/
+}
+
+
+.btn{
+    padding: 10px 40px;
+    border-radius: 0.3rem;
+    background: #ff9800;
+    color: #ffff;
+    font-weight: 500;
+    box-shadow: 0px 0px 10px 5px rgba(27, 27, 27, 0.3);
+    text-shadow: none;
+}
+
+.btn:hover{
+    background: #df8a0a;
+}
+
+/*vdieo*/
+.video{
+    background-image: url(images/bg2.png);
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 50px 100px;
+}
+
+video{
+    height: 700px;
+    border-radius: 10px;
+    border: 2rem solid #203162;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.heading-trailer h2{
+    font-size: 2.5em;
+    font-weight: 800;
+    color: #abd7ff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.video-container{
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.video-container .main-video video{
+    width: 100%;
+}
+
+/*planets*/
+.heading h2{
+    text-align: center;
+    color: #abd7ff;
+    font-size: 2.5em;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    margin-left: 540px;
+    margin-right: 540px;
+    letter-spacing: 1px;
+}
+
+.planets{
+    background-image: url(images/bg2.png);
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 50px 100px;
+}
+
+.planets-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,auto));
+    gap: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.planets-container .box{
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+    background: #203162;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.planets-container .box:hover{
+    transform: scale(1.03);
+}
+
+.planets-container .box img{
+    object-fit: contain;
+    object-position: center;
+    padding: 15px;
+    border-radius: 1.3rem;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.3));
+}
+
+.planets-container .box h3{
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #ff9800;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.planets-container .box p{
+    font-size: 1rem;
+    margin: 0.5rem 0 0.5rem;
+    text-align: center;
+    color: #abd7ff;
+}
+
+/*fun facts*/
+
+.funfacts{
+    background-image: url(images/bg2.png);
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 50px 100px;
+}
+
+.funfacts h2{
+    font-size: 2.5em;
+    font-weight: 800;
+    color: #abd7ff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.funfacts-box{
+    text-align: center;
+    background-color: #203162;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+}
+
+.funfacts-box h3{
+font-size: 1.2em;
+color: #ff9800;
+}
+
+.funfacts-box p{
+    color: #abd7ff;
+    margin-top: 10px;
+}
+
+/*Footer*/
+.footer{
+    text-align: center;
+    background: #203162;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.footer-box h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.footer-box p{
+    font-weight: 500;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    color: #6C757D;
+}
+
+.social{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 0.5rem;
+    margin-top: 20px;
+}
+
+.social a .bx{
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 0.2rem;
+    background: #1a2648;
+    color: #abd7ff;
+}
+
+.social a .bx:hover{
+    background: #ff9800;
+}
+
+.overview{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1.5rem;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.footer-box li a{
+    color: #abd7ff;
+}
+
+.footer-box li a:hover{
+    color: #ff9800;
+}
+
+.footer-box p{
+    margin-top: 30px;
+    font-size: 13px;
+    color: #abd7ff;
+    text-align: center;
+    background: #203162;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Explorers</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 4rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    transition: .2s linear;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+img{
+    width: 100%;
+}
+
+body{
+    color: var(--text-color);
+}
+
+/*Header*/
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*padding: 1% 5%;*/
+    padding: 1%;
+    background: #203162;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.logo h2{
+    display: block;
+    margin-left: 15px;
+    color: #abd7ff;
+}
+
+.navbar {
+    display: flex;
+    margin-right: 50px;
+    align-items: center;
+}
+
+.navbar li{
+    margin: 0 15px;
+}
+
+.navbar li a{
+    position: relative;
+    color: #abd7ff;
+    font-size: 15px;
+    padding: 6px 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#menu-icon{
+    color: var(--text-color);
+    font-size: 24px;
+    z-index: 100001;
+    cursor: pointer;
+    display: none;
+}
+
+/*team*/
+.team{
+    background-image: url(images/bg2.png);
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 50px 100px;
+}
+
+.team h2{
+    font-size: 2.5em;
+    font-weight: 800;
+    color: #abd7ff;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.team-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 5rem;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.team-container img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border: 5px solid #203162;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.team-box{
+    text-align: center;
+}
+
+.team-box h3{
+    margin-top: 20px;
+    color: #ff9800;
+}
+
+/*Footer*/
+.footer{
+    text-align: center;
+    background: #203162;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.footer-box h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.footer-box p{
+    font-weight: 500;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    color: #6C757D;
+}
+
+.social{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 0.5rem;
+    margin-top: 20px;
+}
+
+.social a .bx{
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 0.2rem;
+    background: #203162;
+    color: #abd7ff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.social a .bx:hover{
+    background: #ff9800;
+}
+
+.overview{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1.5rem;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.footer-box li a{
+    color: #abd7ff;
+}
+
+.footer-box li a:hover{
+    color: #ff9800;
+}
+
+.footer-box p{
+    margin-top: 30px;
+    font-size: 13px;
+    color: #abd7ff;
+    text-align: center;
+    background: #203162;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo">
+        <h2>Space Explorers</h2>
+    </a>
+    <!--Menu icon-->
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <!--Links-->
+    <ul class="navbar">
+        <li><a href="index.html">home</a></li> 
+        <li><a href="index.html">planets</a></li>         
+        <li><a href="index.html">fun space facts</a></li>
+    </ul>
+</header>
+
+<!--team-->
+<section class="team" id="team">
+    <div class="heading-team">
+        <h2>our team</h2>
+    </div>
+    <div class="team-container">
+        <div class="team-box">
+            <img src="images/wagas.png" alt="picture">
+            <h3>Augie Wagas</h3>
+            <div class="social">
+                <a href="https://www.facebook.com/wagasmaria?mibextid=ZbWKwL "><i class='bx bxl-facebook' ></i></a>
+                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fwagz_mae%3Figsh%3DMWZxZTZtN3AyNnYxNA%253D%253D%26fbclid%3DIwZXh0bgNhZW0CMTAAAR3IX6IDz8RceCGIlSCTZVNGmmUwKlqhAHlbzkSdljEShS6ObZUA2YA9f8Q_aem_UMn6Z9zg9IcSfh5999kpsQ&h=AT1-vscUQlylk0oCo1u5f9sO9liNoLjMYwTemgjlj_k9_CGhqrdP3ACU8hSC2IHQ1XX1P35NVcrab6IN8dFSK4mt3kCE5TtaF0qWZdKmd2xDJzJW2-m9puqwa_Kck-F51f9aHg"><i class='bx bxl-instagram' ></i></a>
+            </div>
+        </div>
+        <div class="team-box">
+            <img src="images/chyle.jpg" alt="picture">
+            <h3>Chyle Flores</h3>
+            <div class="social">
+                <a href="https://www.facebook.com/chylyvnnflrs?mibextid=ZbWKwL"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://www.instagram.com/chylflrs?igsh=MWFjaXR5aGVpMmlkcg=="><i class='bx bxl-instagram' ></i></a>
+            </div>
+        </div>
+        <div class="team-box">
+            <img src="images/maratas.png" alt="picture">
+            <h3>Sophia Maratas</h3>
+            <div class="social">
+                <a href="https://www.facebook.com/share/1BRcWLbMdm/?mibextid=LQQJ4d"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://www.instagram.com/sphmrts/profilecard/?igsh=MTQzbmx2YmgwcWYxMw=="><i class='bx bxl-instagram' ></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+    
+<!--Footer-->
+<section class="footer">
+    <div class="footer-box">
+        <div class="overview">
+            <li><a href="about.html">About</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+            <li><a href="teams.html">Teams</a></li>
+        </div>   
+        <p>© 2024 Space Explorers | All Rights Reserved.</p>
+    </div>
+</section>
+</body>
+</html>
